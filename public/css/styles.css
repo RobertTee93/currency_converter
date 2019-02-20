@@ -1,0 +1,67 @@
+* {
+  font-family: 'Old Standard TT', serif;
+}
+
+body {
+  background-color: #333;
+}
+
+h1 {
+  text-align: center;
+  color: darkorange;
+}
+
+#flex-container {
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+  margin: auto;
+  border: 1px black solid;
+  border-radius: 50px;
+  box-shadow: 1px -1px 20px #ff8500;
+}
+
+#flex-container button {
+  width: 100px;
+  margin-bottom: 20px;
+  border: 0;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+#flex-container button:hover {
+  background-color: black;
+  color: darkorange;
+}
+
+.flex-item {
+  padding: 10px;
+  color: darkorange;
+}
+
+.flex-item select {
+  width: 100px;
+  font-size: 16px;
+  background: black;
+  color: darkorange;
+}
+
+.flex-item input {
+  font-size: 20px;
+  background: black;
+  border: 0;
+  color: darkorange;
+  text-align: center;
+}
+
+.flex-item label {
+  font-size: 18px;
+}
+
+
+h2{
+  color: darkorange;
+}

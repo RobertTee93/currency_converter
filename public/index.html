@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>Currency Converter</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <link href="https://fonts.googleapis.com/css?family=Old+Standard+TT" rel="stylesheet">
+  <script src="./js/bundle.js"></script>
+</head>
+<body>
+
+  <h1>Currency Converter</h1>
+
+  <div id="app">
+    <div id="flex-container">
+      <div class="flex-item">
+        <label for="currency-select-from">Select currency to convert from:</label>
+      </div>
+      <div class="flex-item">
+        <select v-model="currencyToConvertFrom">
+          <option disabled>Select Currency</option>
+          <option value="1">EUR</option>
+          <option v-for="(currency, key) in currencies" :value="currency">{{ key }}</option>
+        </select>
+      </div>
+
+      <div class="flex-item">
+        <label id="input-number">Enter Amount:</label>
+      </div>
+      <div class="flex-item">
+        <input type="number" v-model="amountToConvert">
+      </div>
+
+      <div class="flex-item">
+        <label for="currency-select-to">Select a currency to convert to:</label>
+      </div>
+      <div class="flex-item">
+        <select v-model="currencyToConvertTo">
+          <option default selected value="Select Country">Select Currency</option>
+          <option value="1">EUR</option>
+          <option  v-for="(currency, key) in currencies" :value="currency">{{ key }}</option>
+        </select>
+      </div>
+
+      <button v-on:click="calculateExchange">Convert</button>
+
+      <h2 v-if="convertedValue">Converted value: {{ convertedValue }}</h2>
+    </div>
+  </div>
+
+</body>
+</html>
